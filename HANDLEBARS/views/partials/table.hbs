@@ -1,0 +1,18 @@
+{{#if productosExist}}
+<table style="border: 1px solid black;">
+  <tr>
+    <th  style="border: 1px solid black; padding: 8px">Nombre</th>
+    <th  style="border: 1px solid black; padding: 8px">Precio</th>
+    <th style="border: 1px solid black; padding: 8px">URL Imagen</th>
+  </tr>
+  {{#each productosGet}}
+  <tr>
+    <td style="border: 1px solid black; padding: 8px">{{title}}</td>
+    <td style="border: 1px solid black; padding: 8px">{{price}}</td>
+    <td style="border: 1px solid black; padding: 8px"><img style="width: 64px; height: auto" src={{thumbnail}} alt="prod_img"/></td>
+  </tr>
+  {{/each}}
+</table>
+{{else}}
+<p style="color: red; font-size: 20px">Sin productos para mostrar</p>
+{{/if}}
